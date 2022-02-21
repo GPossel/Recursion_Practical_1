@@ -14,14 +14,20 @@ namespace Recursion_Practical_1
         public void Assignment_1_Factorial(int numb)
         {
             int n = numb;
+            Console.WriteLine($"n = {n}");
             int result = 1;
 
+            Console.Write($"{n}! = ");
             // A
             for (int i = 1; i < numb; i++)
             {
                 result *= n;
+                Console.Write($"{i} x ");
                 n--;
             }
+
+            Console.Write($"= {result}");
+            Console.WriteLine();
 
             // B
             Console.WriteLine($"n = {numb}");
