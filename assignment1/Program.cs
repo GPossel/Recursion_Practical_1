@@ -14,29 +14,31 @@ namespace Recursion_Practical_1
         public void Assignment_1_Factorial(int numb)
         {
             int n = numb;
-            Console.WriteLine($"n = {n}");
             int result = 1;
 
-            Console.Write($"f(n) = ");
             // A
             for (int i = 1; i < numb; i++)
             {
                 result *= n;
-                Console.Write($"{i} x ");
                 n--;
             }
-
-            Console.Write($"= {result}");
-            Console.WriteLine();
 
             // B
             Console.WriteLine($"n = {numb}");
             string println = "";
             List<string> list = new List<string>();
 
-            for (int i = 0; i < numb; i++)
+            for (int j = 0; j < numb; j++)
             {
-                println += $"f({n}) = f({n - 1}) x {n}";
+                if (n == 1)
+                {
+                    println += $"f({n})";
+                }
+                else
+                {
+                    println += $"f({n}) = f({n - 1}) x {n}";
+                }
+
                 var r = Factorial(n);
                 println += $" = {r}";
                 list.Add(println);
