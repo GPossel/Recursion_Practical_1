@@ -9,11 +9,35 @@ namespace assignment2
         static void Main(string[] args)
         {
             Program myProgram = new Program();
+
+            // A
+            int n = 15;
+            int maxNumberToStop = 377;
+            int num1 = 0;
+            int num2 = 1;
+            int sum = 1;
+            Console.WriteLine($"n = {n}");
+            Console.Write("{0}, ", num1);
+
+            while (sum < maxNumberToStop + 1)
+            {
+                sum = num1 + num2;
+                if (sum == maxNumberToStop) { Console.Write("{0}", sum); break; }
+                Console.Write("{0}, ", num2);
+                num1 = num2;
+                num2 = sum;
+
+            }
+
+            Console.WriteLine();
+            // B
             myProgram.Assignment_2_Fibonacci(10);
         }
 
         public void Assignment_2_Fibonacci(int numb)
         {
+
+            // B
             Console.WriteLine($"n = {numb}");
             string println = "";
             List<string> list = new List<string>();
